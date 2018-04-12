@@ -1,2 +1,2 @@
 # spring-cloud-index
- 学习
+ **springcloud-eureka-server**:服务注册中心
