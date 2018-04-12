@@ -1,10 +1,13 @@
-#服务注册中心示例
-##Spring Cloud Eureka
+**服务注册中心示例**
+
+**Spring Cloud Eureka**
+
 使用**Netflix Eureka**来实现服务注册与发现,它既包含了服务端组件也包含了客户端组件。
 
-###搭建服务注册中心
+**搭建服务注册中心**
 
-####一、创建spring boot工程 
+**一、创建spring boot工程**
+
     命名为springcloud-eureka-server，并在pom.xml文件中引入依赖，代码如下,详细的内容请查看源文件：
 ```java
                <dependency>
@@ -18,7 +21,7 @@
 		</dependency>
 ```
     
-####二、修改配置文件application.properties,添加如下内容:
+**二、修改配置文件application.properties,添加如下内容:**
 ```java
 server.port=8761
 eureka.instance.hostname=localhost
@@ -30,7 +33,7 @@ eureka.client.service-url.defaultZone=http://${eureka.instance.hostname}:${serve
 * eureka.client.fetch-registry属性:代表的含义是本应用是否需要去检索服务
 
 
-####三、修改启动类
+**三、修改启动类**
 ```java
 package com.chit.cloud;
 
