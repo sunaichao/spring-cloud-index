@@ -65,6 +65,7 @@ public class App
 ```
 ---
 **五、验证服务提供者**
+
 在完成上述配置后，先启动服务注册中心springcloud-eureka-server，然后再启动服务提供者springcloud-helloworld-service。
 效果如下：
 ![mahua](service-provider.png)
