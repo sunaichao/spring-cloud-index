@@ -52,9 +52,14 @@ public class SpringcloudEurekaServerApplication {
 }
 
 ```
+
 在完成上述配置后，启动应用并访问http://localhost:8761/,即可看到Eureka的信息面板。
+
 ![mahua](eureka-server.png)
+
+
 至此一个单节点的注册中心就产生了。
+
 ---
 
 ## 配置详解
