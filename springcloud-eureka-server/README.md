@@ -24,6 +24,7 @@
 **二、修改配置文件application.properties,添加如下内容:**
 ```java
 server.port=8761
+server.context-path=/discovery
 eureka.instance.hostname=localhost
 eureka.client.register-with-eureka=false
 eureka.client.fetch-registry=false
