@@ -64,7 +64,7 @@ public class SpringcloudEurekaServerApplication {
 
 ## 配置详解
 
-EurekaClientConfigBean.class配置类
+==EurekaClientConfigBean.class配置类==
 
 ```java
     public static final String PREFIX = "eureka.client";
@@ -144,6 +144,49 @@ preferSameZoneEureka | 是否偏好使用处于相同Zone的Eureka服务端 | tr
 filterOnlyUpInstances | 获取实例时是否过滤，仅保留UP状态的实例 | true
 fetchRegistry | 是否从Eureka服务端获取注册信息 | true
 
+==EurekaInstanceConfigBean.class配置类==
 
+源代码：
+```java
+    private static final String UNKNOWN = "unknown";
+    private HostInfo hostInfo;
+    private InetUtils inetUtils;
+    private String appname = "unknown";
+    private String appGroupName;
+    private boolean instanceEnabledOnit;
+    private int nonSecurePort = 80;
+    private int securePort = 443;
+    private boolean nonSecurePortEnabled = true;
+    private boolean securePortEnabled;
+    private int leaseRenewalIntervalInSeconds = 30;
+    private int leaseExpirationDurationInSeconds = 90;
+    private String virtualHostName = "unknown";
+    private String instanceId;
+    private String secureVirtualHostName = "unknown";
+    private String aSGName;
+    private Map<String, String> metadataMap = new HashMap();
+    private DataCenterInfo dataCenterInfo;
+    private String ipAddress;
+    private String statusPageUrlPath;
+    private String statusPageUrl;
+    private String homePageUrlPath;
+    private String homePageUrl;
+    private String healthCheckUrlPath;
+    private String healthCheckUrl;
+    private String secureHealthCheckUrl;
+    private String namespace;
+    private String hostname;
+    private boolean preferIpAddress;
+    private InstanceStatus initialStatus;
+    private String[] defaultAddressResolutionOrder;
+    private Environment environment;
+```
 
-
+参数名 | 说明 | 默认值
+---|---|---
+preferIpAddress | 是否优先使用ip地址做为主机名标识 | false
+leaseRenewalIntervalInSeconds | Eureka客户端向服务端发送心跳的时间间隔，</br>单位为秒 | 30
+leaseExpirationDurationInSeconds | Eureka服务端在收到最后一次心跳之后等待的时间上限，单位为秒。</br>超过该时间后服务端会将该服务实例从服务清单中剔除，</br>从而禁止服务调用请请求被发送到该实例上 | 30
+nonSecurePort | 非安全的通信端口号 | 80
+securePortEnabled | 是否启用安全的通信端口号 | 
+nonSecurePortEnabled | 是否启用非安全的通信端口号 |true
