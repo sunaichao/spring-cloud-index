@@ -1,8 +1,6 @@
 server:
   port: 10802
-spring:
-  application:
-    name: springcloud-hystix-consumer
+
 eureka:
   client:
     service-url:
