@@ -20,8 +20,16 @@ public class HelloWorldController {
     private DiscoveryClient discoveryClient;
 
     @RequestMapping(value = "/helloworld",method = RequestMethod.GET)
-    public String index(){
+    public String index() throws Exception{
         ServiceInstance instance = discoveryClient.getLocalServiceInstance();
+        logger.info("/helloworld,host:" + instance.getHost() + ", service_id:" + instance.getServiceId());
+        return "helloworld";
+    }
+
+    @RequestMapping(value = "/hystrixworld",method = RequestMethod.GET)
+    public String hystrixworld() throws Exception{
+        ServiceInstance instance = discoveryClient.getLocalServiceInstance();
+        Thread.sleep(10000);
         logger.info("/helloworld,host:" + instance.getHost() + ", service_id:" + instance.getServiceId());
         return "helloworld";
     }
