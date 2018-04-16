@@ -45,10 +45,13 @@ server.port=2001
 
 在hystrix Dashboard的监控首页中，显示出Hystrix Dashboard共支持三种不同的监控方式。如下：
 - [x] Cluster via Turbine (default cluster): http://turbine-hostname:port/turbine.stream 
+
 默认集群监控：通过 URL http://turbine-hostname:port/turbine.stream 开启，实现对默认集群的监控。
 - [x] Cluster via Turbine (custom cluster): http://turbine-hostname:port/turbine.stream?cluster=[clusterName] 
+
 指定集群监控：通过 URL http://turbine-hostname:port/turbine.stream?cluster=[clusterName]开启，实现对clusterName集群的监控。
 - [x] Single Hystrix App: http://hystrix-app:port/hystrix.stream 
+
 单个应用监控：通过 URL   http://hystrix-app:port/hystrix.stream 开启，实现对单个服务实例进行监控。
 
 ### 实例：对服务springcloud-hystrix-consumer服务进行监控
