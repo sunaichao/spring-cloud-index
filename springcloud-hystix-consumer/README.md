@@ -1,5 +1,9 @@
 **服务容错示例**
 ---
+
+**Spring Cloud Hystrix**
+
+---
 **搭建服务容错**
 ---
 **一、创建spring boot工程**
