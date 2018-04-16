@@ -61,3 +61,5 @@ server.port=2001
 ![mahua](result.png)
 
 ---
+
+下一节学习基于Hystrix Dashboard的Turbine集群监控。服务springcloud-turbine-service。
