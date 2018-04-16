@@ -19,6 +19,10 @@ public class HelloService {
         return restTemplate.getForEntity("http://SPRINGCLOUD-HELLOWORLD-SERVICE/hystrixworld",String.class).getBody();
     }
 
+    /**
+     * 超时失败回调方法
+     * @return
+     */
     public String helloFallBack(){
         return "======error=======";
     }
